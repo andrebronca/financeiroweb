@@ -2,10 +2,11 @@
 <faces-config
     xmlns="http://xmlns.jcp.org/xml/ns/javaee"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_3.xsd"
-    version="2.3">
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_5.xsd"
+    version="2.5">
+    <!-- 
  <managed-bean>
- 	<!-- a classe está com annotation -->
+
  	<managed-bean-name>usuarioBean</managed-bean-name>
  	<managed-bean-class>financeiro.web.UsuarioBean</managed-bean-class>
  	<managed-bean-scope>request</managed-bean-scope>
@@ -22,4 +23,5 @@
  		<null-value/>
  	</managed-property>
  </managed-bean>
+ -->
 </faces-config>

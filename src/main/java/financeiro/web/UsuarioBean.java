@@ -2,23 +2,25 @@ package financeiro.web;
 
 import java.util.Map;
 
-import javax.faces.annotation.ManagedProperty;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
-import javax.faces.model.ManagedBean;
+import javax.faces.bean.ManagedBean;
 
 @SuppressWarnings("deprecation")
 @ManagedBean(name="usuarioBean")
 @RequestScoped
 public class UsuarioBean {
+
 	private String nome;
 	private String email;
 	private String senha;
 	private String confirmaSenha;
-	@ManagedProperty(value="#{param}")
+	//@ManagedProperty(value="#{param}")
 	private Map<String, String> parametros;	//obrigatório gerar get/set
 	
+	public UsuarioBean() {
+	}
 	
 	public String novo() {
 		//por hora não há nada aqui, mas pode ser utilizado para iniciar algum campo
