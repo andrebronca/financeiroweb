@@ -1,13 +1,24 @@
 package financeiro.web;
 
-import javax.faces.application.FacesMessage;
-import javax.faces.context.FacesContext;
+import java.util.Map;
 
+import javax.faces.annotation.ManagedProperty;
+import javax.faces.application.FacesMessage;
+import javax.faces.bean.RequestScoped;
+import javax.faces.context.FacesContext;
+import javax.faces.model.ManagedBean;
+
+@SuppressWarnings("deprecation")
+@ManagedBean(name="usuarioBean")
+@RequestScoped
 public class UsuarioBean {
 	private String nome;
 	private String email;
 	private String senha;
 	private String confirmaSenha;
+	@ManagedProperty(value="#{param}")
+	private Map<String, String> parametros;	//obrigatório gerar get/set
+	
 	
 	public String novo() {
 		//por hora não há nada aqui, mas pode ser utilizado para iniciar algum campo
@@ -25,6 +36,14 @@ public class UsuarioBean {
 		}
 		//as palavras: usuario, sucesso serão configuradas no arquivo: faces-config.xml
 		return "sucesso";
+	}
+	
+	public Map<String, String> getParametros() {
+		return parametros;
+	}
+	
+	public void setParametros(Map<String, String> parametros) {
+		this.parametros = parametros;
 	}
 
 	public String getNome() {

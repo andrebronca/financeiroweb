@@ -9,5 +9,6 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="D:/JDev/install/wildfly-24.0.1.Final/modules/system/layers/base/javax/faces/api/main/jboss-jsf-api_2.3_spec-3.0.0.SP04.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
